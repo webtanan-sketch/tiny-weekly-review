@@ -1,0 +1,1 @@
+import{describe,expect,it}from'vitest';import{buildWeeklyReview}from'./review';describe('weekly review',()=>{it('summarizes signals',()=>{const r=buildWeeklyReview({completedDelegations:2,openDelegations:1,overdueDeadlines:1,highRisks:0,staleWaiting:0,decisionsMade:1},'en');expect(r.headline.length).toBeGreaterThan(0);expect(r.attention[0]).toContain('overdue')})});
